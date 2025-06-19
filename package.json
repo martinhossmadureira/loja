@@ -1,4 +1,0 @@
-"scripts": {
-  "dev": "npx tailwindcss -i ./assets/css/style.css -o ./assets/css/tailwind.css --watch",
-  "build": "npx tailwindcss -i ./assets/css/style.css -o ./assets/css/tailwind.css --minify"
-}
