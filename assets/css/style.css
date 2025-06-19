@@ -1,4 +1,253 @@
 /* assets/css/style.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+/* Reset Básico para consistência entre navegadores */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Cor de texto padrão */
+    background-color: #f7f7f7; /* Um cinza bem claro para o fundo */
+    line-height: 1.6;
+}
+
+/* Containers e Responsividade */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px */
+    padding-right: 1rem; /* 16px */
+}
+
+/* Headers */
+.text-blue-900 {
+    color: #1a202c; /* Azul escuro quase preto */
+}
+.text-blue-800 {
+    color: #2c5282; /* Azul um pouco mais claro */
+}
+.text-gray-800 {
+    color: #2d3748;
+}
+.text-gray-700 {
+    color: #4a5568;
+}
+.text-gray-600 {
+    color: #718096;
+}
+.text-gray-500 {
+    color: #a0aec0;
+}
+.text-yellow-400 {
+    color: #f6e05e; /* Amarelo para destaque */
+}
+
+.text-white {
+    color: #fff;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+.font-merriweather {
+    font-family: 'Merriweather', serif;
+}
+.font-bold {
+    font-weight: 700;
+}
+.font-semibold {
+    font-weight: 600;
+}
+.font-medium {
+    font-weight: 500;
+}
+
+
+/* Text Sizes */
+.text-sm { font-size: 0.875rem; /* 14px */ }
+.text-md { font-size: 1rem;     /* 16px */ }
+.text-lg { font-size: 1.125rem; /* 18px */ }
+.text-xl { font-size: 1.25rem;  /* 20px */ }
+.text-2xl { font-size: 1.5rem;   /* 24px */ }
+.text-3xl { font-size: 1.875rem; /* 30px */ }
+.text-4xl { font-size: 2.25rem;  /* 36px */ }
+.text-5xl { font-size: 3rem;     /* 48px */ }
+.text-6xl { font-size: 3.75rem;  /* 60px */ }
+
+
+/* Margins e Paddings */
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-8 { padding-left: 2rem; padding-right: 2rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-10 { margin-bottom: 2.5rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-12 { margin-top: 3rem; }
+.mt-16 { margin-top: 4rem; }
+.ml-4 { margin-left: 1rem; }
+
+/* Display e Flexbox */
+.flex { display: flex; }
+.block { display: block; }
+.hidden { display: none; } /* Será controlado por JS */
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.flex-col { flex-direction: column; }
+.flex-shrink-0 { flex-shrink: 0; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.space-x-2 > *:not(:first-child) { margin-left: 0.5rem; } /* para itens em linha */
+.space-x-6 > *:not(:first-child) { margin-left: 1.5rem; }
+.space-x-8 > *:not(:first-child) { margin-left: 2rem; }
+.space-y-3 > *:not(:first-child) { margin-top: 0.75rem; } /* para itens em coluna */
+.space-y-4 > *:not(:first-child) { margin-top: 1rem; }
+
+/* Grid Layout */
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+/* Classes responsivas para grid - ajusta com media queries */
+/* Pequenas telas (sm) */
+@media (min-width: 640px) {
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Médias telas (md) */
+@media (min-width: 768px) {
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .md\:w-1\/3 { width: 33.333333%; }
+    .md\:w-2\/3 { width: 66.666667%; }
+    .md\:flex-row { flex-direction: row; }
+    .md\:items-start { align-items: flex-start; }
+    .md\:p-12 { padding: 3rem; } /* 48px */
+}
+/* Grandes telas (lg) */
+@media (min-width: 1024px) {
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.col-span-full { grid-column: span / span 12; /* Ajuste para preencher a largura total do grid */ }
+
+
+/* Componentes Comuns */
+.bg-white { background-color: #fff; }
+.bg-blue-900 { background-color: #1a202c; }
+.bg-blue-700 { background-color: #2b6cb0; }
+.bg-blue-800 { background-color: #2c5282; }
+.hover\:bg-blue-800:hover { background-color: #2c5282; }
+.hover\:bg-blue-700:hover { background-color: #2b6cb0; }
+.hover\:bg-blue-100:hover { background-color: #ebf8ff; }
+.bg-yellow-500 { background-color: #ecc94b; }
+.hover\:bg-yellow-600:hover { background-color: #d69e2e; }
+.bg-gray-50 { background-color: #f9fafb; }
+.bg-gray-200 { background-color: #edf2f7; }
+.hover\:bg-gray-300:hover { background-color: #e2e8f0; }
+.bg-yellow-100 { background-color: #fffdf0; }
+
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-full { border-radius: 9999px; }
+
+.overflow-hidden { overflow: hidden; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.leading-tight { line-height: 1.25; }
+.leading-relaxed { line-height: 1.625; }
+
+/* Transições e Transformações (Hover Effects) */
+.transition {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.transform { transform: var(--tw-transform); } /* Placeholder para transformações */
+.hover\:scale-105:hover {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* Bordas */
+.border { border-width: 1px; }
+.border-white { border-color: #fff; }
+.border-blue-700 { border-color: #2b6cb0; }
+.border-gray-400 { border-color: #cbd5e0; }
+.hover\:border-gray-500:hover { border-color: #a0aec0; }
+.border-yellow-300 { border-color: #fbd38d; }
+
+/* Elementos de Formulário */
+.appearance-none { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-gray-700.leading-tight.focus\:outline-none.focus\:shadow-outline {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border-width: 1px;
+    border-color: #e2e8f0;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    color: #4a5568;
+    line-height: 1.25;
+}
+.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-gray-700.leading-tight.focus\:outline-none.focus\:shadow-outline:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Exemplo de focus ring */
+}
+.pr-8 { padding-right: 2rem; } /* Para o select */
+
+/* Imagens */
+.w-full { width: 100%; }
+.h-72 { height: 18rem; /* 288px */ }
+.h-48 { height: 12rem; /* 192px */ }
+.h-auto { height: auto; }
+.object-cover { object-fit: cover; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Links */
+a {
+    text-decoration: none;
+}
+a.text-gray-700:hover {
+    color: #2b6cb0; /* Azul escuro no hover */
+}
+a.text-gray-300:hover {
+    color: #fff;
+}
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+/* Alturas Mínimas */
+.min-h-screen { min-height: 100vh; }
+
+/* Classes Específicas para componentes (caso necessário) */
+/* Ex: Capa de livro */
+.book-cover {
+    width: 100%;
+    height: 18rem; /* Ajuste conforme a proporção das suas capas */
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
