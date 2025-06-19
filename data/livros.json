@@ -1,0 +1,28 @@
+[
+  {
+    "id": "livro-001",
+    "titulo": "Namoro Para Vida Toda",
+    "descricao": "Uma perspectiva Bíblica sobre Namoro, o Autor ensina Princípios existentes nas escrituras para Relacionamentos bem sucedidos, pois, Namoros Abençoados são primicias de Casamentos Felizes.",
+    "categoria": "Relacionamento",
+    "tipo": "Manual",
+    "dataPublicacao": "2023-06-10",
+    "destaque": true,
+    "imagem": "/assets/img/Namoro-1.jpg",
+    "linkCompra": "https://pay.kuenha.com/fc181391-9c9e-44ea-a04c-196b8fad08be",
+    "linkAmostra": null,
+    "slug": "Namoro-Para-Vida-Toda"
+  },
+  {
+    "id": "livro-002",
+    "titulo": "As Janelas Do Céu",
+    "descricao": "No Céu há Janelas? O que são as Janelas do Céu? essas e tantas outras perguntas são respondidas pelo autor Martinho S. S. Madureira neste livro maravilhoso que fala sobre o cuidado de Deus através da Provisão.",
+    "categoria": "Prosperidade",
+    "tipo": "Manual",
+    "dataPublicacao": "2024-11-30",
+    "destaque": true,
+    "imagem": "/assets/img/As-Janelas.png",
+    "linkCompra": "https://pay.kuenha.com/1d921f2f-4ed1-47d7-b84e-06c7745f432a",
+    "linkAmostra": null,
+    "slug": "As-Janelas-Do-Céu"
+  }
+]
